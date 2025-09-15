@@ -121,7 +121,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 md:px-20 bg-gray-900 text-white">
+    <section id="contact" className="py-20 px-0 lg:px-4 md:px-20 bg-gray-900 text-white">
       <h2 className="text-3xl font-bold text-center mb-12 ">Contact Me</h2>
 
       <div className="flex items-center flex-col md:flex-row gap-10">
