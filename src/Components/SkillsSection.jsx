@@ -38,33 +38,33 @@ const SkillsSection = () => {
 
                 {/* Continuous Sliding Row */}
                 <div className="relative w-full overflow-hidden">
-                    <div className="flex w-max animate-marquee space-x-6"> {/* ✅ Added space-x-6 */}
+                    <div className="flex animate-marquee space-x-4 sm:space-x-6">
                         {skills.map((skill, index) => (
                             <div
                                 key={index}
-                                className="flex-shrink-0 w-28 md:w-32 lg:w-36 bg-[#121a2e] rounded-xl shadow-lg p-4 flex flex-col items-center hover:scale-105 transition-transform duration-300"
+                                className="flex-shrink-0 w-16 sm:w-20 md:w-28 lg:w-36 bg-[#121a2e] rounded-xl shadow-lg p-2 sm:p-3 md:p-4 flex flex-col items-center hover:scale-105 transition-transform duration-300"
                             >
                                 <img
                                     src={skill.img}
                                     alt={skill.name}
-                                    className="w-12 h-12 md:w-14 md:h-14 object-contain mb-2"
+                                    className="w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 object-contain mb-1 sm:mb-2"
                                 />
-                                <p className="text-gray-300 text-sm font-medium">{skill.name}</p>
+                                <p className="text-gray-300 text-xs sm:text-sm md:text-sm font-medium">{skill.name}</p>
                             </div>
                         ))}
 
-                        {/* Duplicate row for smooth infinite scroll */}
+                        {/* Duplicate for smooth scroll */}
                         {skills.map((skill, index) => (
                             <div
                                 key={`dup-${index}`}
-                                className="flex-shrink-0 w-28 md:w-32 lg:w-36 bg-[#121a2e] rounded-xl shadow-lg p-4 flex flex-col items-center hover:scale-105 transition-transform duration-300"
+                                className="flex-shrink-0 w-16 sm:w-20 md:w-28 lg:w-36 bg-[#121a2e] rounded-xl shadow-lg p-2 sm:p-3 md:p-4 flex flex-col items-center hover:scale-105 transition-transform duration-300"
                             >
                                 <img
                                     src={skill.img}
                                     alt={skill.name}
-                                    className="w-12 h-12 md:w-14 md:h-14 object-contain mb-2"
+                                    className="w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 object-contain mb-1 sm:mb-2"
                                 />
-                                <p className="text-gray-300 text-sm font-medium">{skill.name}</p>
+                                <p className="text-gray-300 text-xs sm:text-sm md:text-sm font-medium">{skill.name}</p>
                             </div>
                         ))}
                     </div>
